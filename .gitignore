@@ -1,0 +1,27 @@
+# Env
+.env
+
+# Cache
+*.cache
+
+# Caches de Python
+__pycache__/
+.pytest_cache/
+*.pytest_cache/
+
+# Drawings
+*.docx
+
+# Index
+*.sample_index/
+
+# Archivos de Jupyter Notebook
+RAG_workshop.ipynb
+
+# Drawings
+*.drawio
+
+# medium_files folder
+medium_files/
+
+
