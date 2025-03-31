@@ -1,4 +1,4 @@
-# 🎬 Quick RAG Evaluation with TV Series Q&A  
+# Automatic RAG Dataset Creation and Evaluation with Giskard & RAGAS 
 
 <img title="Logo" alt="Alt text" src="/imgs/cover_page.png" height="400">
 
