@@ -18,6 +18,7 @@ __pycache__/
 
 # testset
 data/testset/testset.csv
+data/chunks/chunks.csv
 
 # Archivos de Jupyter Notebook
 RAG_workshop.ipynb

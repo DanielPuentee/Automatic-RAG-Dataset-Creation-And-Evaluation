@@ -1,6 +1,6 @@
 # 🎬 Quick RAG Evaluation with TV Series Q&A  
 
-<img title="Logo" alt="Alt text" src="/imgs/cover_page.png">
+<img title="Logo" alt="Alt text" src="/imgs/cover_page.png" height="400">
 
 *A lightweight Retrieval-Augmented Generation (RAG) pipeline using Langchain, RAGAS, Giskard, Gemmini & LangSmith*
 
