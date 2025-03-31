@@ -1,13 +1,8 @@
-
-import warnings
-warnings.filterwarnings("ignore")
-
 from dotenv import load_dotenv
 load_dotenv()
 
 import pandas as pd
 import os
-import json
 import giskard
 from giskard.rag import generate_testset, KnowledgeBase  
 import re

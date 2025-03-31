@@ -1,5 +1,7 @@
 # 🎬 Quick RAG Evaluation with TV Series Q&A  
 
+<img title="Logo" alt="Alt text" src="/imgs/cover_page.png">
+
 *A lightweight Retrieval-Augmented Generation (RAG) pipeline using Langchain, RAGAS, Giskard, Gemmini & LangSmith*
 
 ![GitHub top language](https://img.shields.io/github/languages/top/DanielPuentee/Automatic-RAG-Dataset-Creation-And-Evaluation)
@@ -18,7 +20,7 @@ This repository demonstrates how to **quickly evaluate RAG systems** without the
 We use a sample use case: **answering questions about popular TV series** like *Breaking Bad* and *La Casa de Papel*.  
 The pipeline is fully open-source and built using:
 
-- [Langchain](https://www.langchain.com/)
+- [Langchain](https://www.langchain.com/) - a platform to help build language model applications
 - [Gemmini](https://github.com/langchain-ai/gemmini) – a completely open-source orchestration framework for LLM apps
 - [RAGAS](https://github.com/explodinggradients/ragas) – for evaluating RAG responses
 - [Giskard](https://giskard.ai/) – to detect hallucinations, bias, and robustness issues
@@ -50,17 +52,14 @@ We simulate a real-world scenario:
 
 We eliminate the need to create a labeled dataset from scratch by:
 
-1. Generating **realistic questions** (e.g. from critics, students, or fans)
-2. Feeding them through a **Langchain RAG pipeline**
-3. Using **RAGAS** to compute evaluation metrics:
+1. Generating **realistic questions and answers** using **Giskard**
+2. Using **RAGAS** to compute evaluation metrics:
    - Context Precision
+   - Context Recall
    - Faithfulness
+   - Answer Similarity
    - Answer Relevancy
-4. Running **Giskard** tests to detect:
-   - Hallucinations
-   - Sensitivity to question changes
-   - Ethical issues or biases
-5. Tracking all generations and context chunks using **LangSmith**
+3. Tracking all generations and context chunks using **LangSmith**
 
 ---
 
@@ -69,21 +68,18 @@ We eliminate the need to create a labeled dataset from scratch by:
 ```text
 1. 🔧 Setup
    - Install and import dependencies
-   - Load and chunk source documents (TV series summaries)
-   - Configure retriever and LLM using Gemmini
+   - Env variables
+   - Load clients
 
-2. ❓ Generate Realistic Questions
-   - Prompt templates simulate questions from fans, critics, or students
+2. 📦 Chunking & Vect BBDD creation
+   - Simple steps to create chunking dataset and vector database
 
-3. 🔄 Run the RAG Pipeline
-   - Use Langchain to retrieve context and generate answers
+3. ⚙️ Create dataset
+   - Use Giskard to create the dataset
 
-4. 📊 Evaluate Responses
+4. 🔄 Retrieve examples & Evaluate
    - Use RAGAS to compute metrics
-   - Use Giskard to run test suites
 
-5. 📈 Monitor & Debug
-   - Use LangSmith to trace and evaluate every generation
+5. 🎯 Answer questions & Evaluate
+   - Use RAGAS to compute metrics
 
-6. ✅ Summary
-   - Discuss quick insights and next steps

@@ -1,6 +1,5 @@
 from langchain import FAISS # For indexing
 
-
 class Retrieval:
 
     def __init__(self, index_name, embeddings):

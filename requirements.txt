@@ -1,0 +1,16 @@
+# Core utilities
+python-dotenv==1.0.1
+pandas==2.2.3
+PyPDF2==3.0.1  # Directly imported
+
+# Langchain core and specific components
+langchain==0.3.10
+langchain-community==0.3.10 # Often needed for loaders like DataFrameLoader and vector stores
+langchain-google-genai==2.0.10
+langchain-text-splitters==0.3.2
+faiss-cpu==1.8.0 # Required for FAISS functionality
+
+# Evaluation frameworks
+giskard==2.16.2
+ragas==0.2.14
+datasets==3.5.0 # Used by ragas for data handling

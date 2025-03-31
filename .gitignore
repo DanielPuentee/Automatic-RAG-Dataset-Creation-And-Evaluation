@@ -11,9 +11,13 @@ __pycache__/
 
 # Drawings
 *.docx
+*.pptx
 
 # Index
-*.sample_index/
+*sample_index/
+
+# testset
+data/testset/testset.csv
 
 # Archivos de Jupyter Notebook
 RAG_workshop.ipynb
