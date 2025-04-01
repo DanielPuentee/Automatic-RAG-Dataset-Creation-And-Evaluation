@@ -22,6 +22,7 @@ data/chunks/chunks.csv
 
 # Archivos de Jupyter Notebook
 RAG_workshop.ipynb
+EVALUACIÓN_RAG.ipynb
 
 # Drawings
 *.drawio

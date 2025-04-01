@@ -1,4 +1,3 @@
-from ragas import evaluate, RunConfig  
 from ragas.metrics import faithfulness, answer_relevancy, answer_similarity, context_recall, context_precision  
 from ragas import evaluate, RunConfig  
 from ragas.metrics import (  
@@ -18,13 +17,13 @@ class Evaluation:
         self.embeddings = embeddings
 
         self.run_config = RunConfig(  
-                timeout=3000,
-                max_retries=5, 
-                max_wait=60, 
-                max_workers=8, 
-                exception_types=(Exception),
-                log_tenacity=True,
-                seed=42
+                timeout = 10000,
+                max_retries = 5, 
+                max_wait = 60, 
+                max_workers = 8, 
+                exception_types = (Exception),
+                log_tenacity = True,
+                seed = 40
             )  
         self.metrics = {
             'context_precision': context_precision,
@@ -68,7 +67,7 @@ class Evaluation:
             data['retrieved_contexts'] =retrieved_contexts.tolist()
 
         if answer_metrics:
-            data['response'] = testset_df['generated_answer'].tolist()    
+            data['response'] = testset_df['generated_answer'].tolist()
   
         dataset = Dataset.from_dict(data)  
 

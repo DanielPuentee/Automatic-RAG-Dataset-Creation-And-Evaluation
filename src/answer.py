@@ -7,7 +7,6 @@ class Answering:
         self.system_prompt = """You are a film and TV series critic, specializing in detailed analysis of plots, characters, and television productions.
         Using your extensive knowledge and experience, provide detailed and accurate answers to users' questions about movies and series.
         Respond in an impartial, professional, and analytical tone using fewer than 800 words.
-        Respond in the language {language}.
         """
 
         self.user_prompt = """Context:
@@ -20,7 +19,6 @@ class Answering:
         Question:
         {query}
         ===
-        Answer in less than 800 words and in {language}.
         Answer:
         """
 
@@ -36,8 +34,8 @@ class Answering:
         Returns:
             str: answer
         """
-        system = self.system_prompt.format(language="Spanish")
-        user = self.user_prompt.format(context=context, query=query, language="Spanish")
+        system = self.system_prompt.format()
+        user = self.user_prompt.format(context=context, query=query)
         messages = [
             ("system", system),
             ("human", user)
